@@ -22,18 +22,18 @@ local function run(msg, matches)
             
                     local hash = 'mate:'..msg.to.id
                     redis:set(hash, true)
-                    return "Silent All Has Been Enabled"
+                    return "🔒سکوت عمومی فعال شد"
   elseif matches[1] == 'unsilent' and is_sudo(msg) then
                     local hash = 'mate:'..msg.to.id
                     redis:del(hash)
-                    return "Silent All Has Been Disabled"
+                    return "🔓سکوت عمومی غیرفعال شد"
 					end
 					if matches[1] == 'status' then
                     local hash = 'mate:'..msg.to.id
                     if redis:get(hash) then
-                    return "Silent All Is Enable"
+                    return "🔒سکوت عمومی فعال شد"
 					else 
-					return "Silent All Is Disable"
+					return "🔓سکوت عمومی غیر فعال شد"
 
 end
 end
