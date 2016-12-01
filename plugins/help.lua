@@ -105,7 +105,7 @@ function run(msg, matches)
 ➖➖➖➖➖➖]]
     if matches[1] == 'help' and is_sudo(msg) then
       send_large_msg("user#id"..msg.from.id, help)      
-   return 'راهنما به پی وی شما ارسال شد'
+   return '⚙راهنما به پی وی شما ارسال شد⚙'
     end
 end 
 
